@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <div>
+        <article>
+          <a href="/spooktober/<%= movie._id %>">
+            <h2>
+              <%= movie.title %> - <%= movie.released %><br> 
+              <br>
+              <%= movie.overview %><br>
+              <br>
+              My Notes: <%= movie.myNotes %><br>
+              My Rating: <%= movie.myRating %>
+            </h2>
+          </a>
+          <a href="/spooktober/<%= movie._id %>/edit"><button>Edit</button></a>
+          <form action="/spooktober/<%= movie._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete"/>
+        </form>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

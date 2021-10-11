@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <div>
+        <form action="/spooktober" method="post">
+            <fieldset>
+                <legend>Add Spooky Movie</legend>
+                <label>
+                    Title:<input type="text" name="title" placeholder="Movie Title"/>
+                    Overview:<input type="text" name="overview" placeholder="Movie Overview"/>
+                    Released:<input type="date" name="released" placeholder="Release Date"/>
+                    My Notes:<input type="text" name="myNotes" placeholder="Enter Notes"/>
+                    My Rating:<input type="number" name="myRating" placeholder="Rate Movie"/>
+                    Poster:<input type="url" name="poster" placeholder="Add Image"/>                
+                </label>
+            </fieldset>
+            <input type="submit" value="Add New Spooky Movie"/>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
