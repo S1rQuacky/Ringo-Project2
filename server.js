@@ -96,6 +96,30 @@ app.post("/spooktober", (req, res) => {
   });
 });
 
+//Edti
+app.get("/spooktober/:id/edit", (req, res) => {
+  const id = req.params.id
+  MovieModel.findById(id, (err, movie) => {
+    res.render("spooktober/edit.ejs", {movie})
+  });
+});
+
+//Update
+app.put("/spooktober/:id", (req, res) => {
+  const id = req.params.id
+  MovieModel.findByIdAndUpdate(id, req.body, {new: true}, (err, movie) => {
+    res.redirect("/spooktober")
+  });
+});
+
+//Delete
+app.delete("/spooktober/:id", (req, res) => {
+  const id = req.params.id
+  MovieModel.findByIdAndRemove(id, (err, movie) => {
+    res.redirect("/spooktober")
+  });
+});
+
 //Show
 app.get("/spooktober/:id", (req, res) => {
   const id = req.params.id

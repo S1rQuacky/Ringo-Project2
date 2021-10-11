@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main>
+      <div>
+        <form action="/spooktober/<%= movie._id %>?_method=PUT" method="post">
+            <fieldset>
+                <legend>Edit <%= movie.title %></legend>
+                <label>
+                    Title:<input type="text" name="title" value="<%= movie.title %>" placeholder="Edit Title"/>
+                    Overview:<input type="text" name="overview" value="<%= movie.overview %>" placeholder="Edit Overview"/>
+                    Released:<input type="date" name="released" value="<%= movie.released %>" placeholder="Edit Date"/>
+                    My Notes:<input type="text" name="myNotes" value="<%= movie.myNotes %>" placeholder="Edit Notes"/>
+                    My Rating:<input type="number" name="myRating" value="<%= movie.myRating %>" placeholder="Edit Rating"/>
+                    Poster:<input type="url" name="poster" value="<%= movie.poster %>" placeholder="Edit Image"/>                
+                </label>
+            </fieldset>
+            <input type="submit" value="Update <%= movie.title %>"/>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
