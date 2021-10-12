@@ -5,6 +5,9 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
+        <div class="logout">
+            <a href="/user/logout"><button>Logout</button></a>
+        </div>
       <div>
           <a href="/spooktober/new"><button>Add Spooky Movie</button></a>
         <% for (watch of flicks) { %>
