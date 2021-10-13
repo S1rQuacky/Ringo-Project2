@@ -5,8 +5,8 @@
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
-      <div>
-        <form action="/user/login" method="post">
+      <div id="login">
+        <form class="user" action="/user/login" method="post">
           <fieldset>
             <legend>User Login</legend>
             <label
@@ -16,7 +16,7 @@
               >PASSWORD: <input type="password" name="password" required />
             </label>
             
-            <input type="submit" value="Login" />
+            <button>Login</button>
         
           </fieldset>
         </form>

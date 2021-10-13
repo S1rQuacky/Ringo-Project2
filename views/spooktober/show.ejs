@@ -9,8 +9,10 @@
         <article>
           <a href="/spooktober/<%= movie._id %>">
             <h2>
-              <%= movie.title %> - <%= moment(movie.released).format('MMM Do YYYY') %><br> 
-              <img src="<%=movie.poster%>" >
+              <%= movie.title %> - <%= moment(movie.released).format('MMM Do YYYY') %><br>
+              <div id="poster"> 
+                <img src="<%=movie.poster%>" >
+            </div>
               <br>
               <%= movie.overview %><br>
               <br>

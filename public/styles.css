@@ -1,21 +1,57 @@
 h1 {
-    font-family: 'Freckle Face', cursive;
+    font-family: creepster;
     color: black;
     text-align: center;
-    margin: 25px;
-    font-size: 75px;
-    -webkit-text-stroke: 3px rgb(187, 124, 8);
+    margin: 10px;
+    font-size: 100px;
+    -webkit-text-stroke: 3px rgb(134, 46, 46);
+    -webkit-animatim: change 5s linear infinite;
+    
     
     
 }
+
+
+body {
+	background-color: #6c7b81;
+    box-shadow: inset 0 0 450px 0 #42575f,
+    0 0px 25px 1px black,
+    inset 0 0px 10px 0px black;
+	overflow: hidden;
+    
+}
+
+  .web-right {
+	position: absolute;
+	height: 200px;
+	width: auto;
+	right: -10px;
+	top: -10px;
+	z-index: -1;
+	opacity: 0.2;
+}
+
+
 
 button {
     color: black;
     background-color: orange;
+    
 
 }
-
-login {
+div{
     color: black;
-    background-color: orange;
 }
+div.index {
+    color: black;
+}
+div.logout {
+    float: right;
+    margin-left: -50%;
+}
+div.poster {
+    max-width: 100%;
+    max-height: auto;
+}
+
+
