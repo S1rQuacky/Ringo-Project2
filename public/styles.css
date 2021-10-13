@@ -1,0 +1,21 @@
+h1 {
+    font-family: 'Freckle Face', cursive;
+    color: black;
+    text-align: center;
+    margin: 25px;
+    font-size: 75px;
+    -webkit-text-stroke: 3px rgb(187, 124, 8);
+    
+    
+}
+
+button {
+    color: black;
+    background-color: orange;
+
+}
+
+login {
+    color: black;
+    background-color: orange;
+}

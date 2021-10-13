@@ -7,6 +7,7 @@ const UserRouter = require("./controllers/user");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const app = express();
+
 //Port
 //Allow use of Heroku's port or your own local port, depending on the environment
 const PORT = process.env.PORT || 3000;
@@ -36,6 +37,8 @@ app.use("/user", UserRouter)
 app.get("/", (req, res) => {
   res.render("index.ejs")
 });
+
+
 
 //___________________
 //Listener

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include("../partials/head.ejs") %>
-
+  <a href="/spooktober"><button>HOME</button></a>
   <body>
     <%- include("../partials/header.ejs") %>
     <main>
@@ -9,7 +9,8 @@
         <article>
           <a href="/spooktober/<%= movie._id %>">
             <h2>
-              <%= movie.title %> - <%= movie.released %><br> 
+              <%= movie.title %> - <%= moment(movie.released).format('MMM Do YYYY') %><br> 
+              <img src="<%=movie.poster%>" >
               <br>
               <%= movie.overview %><br>
               <br>
@@ -19,7 +20,7 @@
           </a>
           <a href="/spooktober/<%= movie._id %>/edit"><button>Edit</button></a>
           <form action="/spooktober/<%= movie._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete"/>
+            <button>Delete</button>
         </form>
         </article>
       </div>

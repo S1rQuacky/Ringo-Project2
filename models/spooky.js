@@ -10,7 +10,7 @@ const movieSchema = new Schema({
   released: Date,
   myRating: Number,
   myNotes: String,
-  poster: {data: Buffer, contentType: String},
+  poster: String,
   username: String 
 })
 

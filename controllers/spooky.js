@@ -1,5 +1,6 @@
 const express = require("express");
 const MovieModel = require("../models/spooky")
+const moment = require('moment')
 
 const router = express.Router()
 
@@ -76,7 +77,7 @@ router.use((req, res, next) => {
   router.get("/:id", (req, res) => {
     const id = req.params.id
     MovieModel.findById(id, (err, movie) => {
-      res.render("spooktober/show.ejs", {movie})
+      res.render("spooktober/show.ejs", {movie, moment: moment})
     });
   });
 

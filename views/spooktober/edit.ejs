@@ -4,6 +4,9 @@
 
   <body>
     <%- include("../partials/header.ejs") %>
+    <h2>
+        <a href="/spooktober"><button>HOME</button></a>
+    </h2>
     <main>
       <div>
         <form action="/spooktober/<%= movie._id %>?_method=PUT" method="post">
@@ -18,7 +21,7 @@
                     Poster:<input type="url" name="poster" value="<%= movie.poster %>" placeholder="Edit Image"/>                
                 </label>
             </fieldset>
-            <input type="submit" value="Update <%= movie.title %>"/>
+            <button>Update <%= movie.title %></button>
         </form>
       </div>
     </main>
